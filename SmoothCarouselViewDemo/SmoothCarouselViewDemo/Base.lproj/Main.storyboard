@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SmoothCarouselViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9nR-71-Ot9">
+                                <rect key="frame" x="0.0" y="301" width="393" height="250"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Tll-DE-ZA6"/>
+                                </constraints>
+                            </view>
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="nGX-xO-82b">
+                                <rect key="frame" x="160" y="581" width="73" height="26"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cow-lF-4JJ">
+                                <rect key="frame" x="127.66666666666669" y="634" width="138" height="41"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add more Cats"/>
+                                <connections>
+                                    <action selector="addMoreCats:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wap-7c-yfP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.85191761363636365" green="0.84079982517482521" blue="0.83533653846153844" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nGX-xO-82b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3xK-5z-QcQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nGX-xO-82b" secondAttribute="trailing" constant="16" id="9JI-Mh-XTg"/>
+                            <constraint firstItem="9nR-71-Ot9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="IHj-u4-WFO"/>
+                            <constraint firstItem="9nR-71-Ot9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="K8h-Vs-DkT"/>
+                            <constraint firstItem="cow-lF-4JJ" firstAttribute="top" secondItem="nGX-xO-82b" secondAttribute="bottom" constant="27" id="QDO-Rp-liZ"/>
+                            <constraint firstItem="9nR-71-Ot9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hpq-ui-w3e"/>
+                            <constraint firstItem="nGX-xO-82b" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="lwP-kT-fYm"/>
+                            <constraint firstItem="nGX-xO-82b" firstAttribute="top" secondItem="9nR-71-Ot9" secondAttribute="bottom" constant="30" id="u8Q-L5-Kn9"/>
+                            <constraint firstItem="cow-lF-4JJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vRQ-8k-qZE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addMoreButton" destination="cow-lF-4JJ" id="uoq-sE-Sjr"/>
+                        <outlet property="carouselContainerView" destination="9nR-71-Ot9" id="xk1-7H-j6C"/>
+                        <outlet property="pageControl" destination="nGX-xO-82b" id="6KL-nw-nW9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+</document>
